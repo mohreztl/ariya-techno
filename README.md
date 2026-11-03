@@ -14,6 +14,12 @@ npm run dev
 
 فایل اصلی تک‌فایلی: `app/page.tsx` (شامل Navbar، Hero سه‌بعدی، Bento Grid، کشف هوشمند، محصولات و پیشنهاد شگفت‌انگیز، Marquee برندها و Footer).
 
+## انتشار (GitHub Pages)
+
+سایت زنده: https://mohreztl.github.io/ariya-techno/
+
+با هر push به شاخه `main`، ورک‌فلوی `.github/workflows/deploy-pages.yml` بیلد استاتیک (`next build` با `output: "export"`) را می‌سازد و روی GitHub Pages مستقر می‌کند. چون سایت زیر مسیر `/<repo-name>/` سرو می‌شود، در حالت production مقدار `basePath` برابر `/ariya-techno` تنظیم می‌شود.
+
 ## پیش‌نمایش بدون نصب
 
 فایل `index.html` را مستقیم در مرورگر باز کن — همان رابط و تعامل‌ها (سوئیچ عمده/تکی، جستجو، کشف هوشمند، سبد خرید، شمارش معکوس) بدون نیاز به نصب اجرا می‌شود.
