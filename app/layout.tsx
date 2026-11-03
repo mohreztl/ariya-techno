@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -6,18 +6,24 @@ export const metadata: Metadata = {
   description: "خرید تکی و عمده لوازم جانبی موبایل، گجت‌های هوشمند و لوازم جانبی با ارسال سریع از آریا تکنو",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0B0F17",
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fa" dir="rtl">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Official Vazirmatn CDN (jsdelivr) — reliable inside Iran */}
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap"
           rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
         />
       </head>
-      <body className="bg-[#0B0F17] text-[#F8FAFC] font-[Vazirmatn] antialiased">{children}</body>
+      <body className="bg-[#0B0F17] text-[#F8FAFC] antialiased">{children}</body>
     </html>
   );
 }
