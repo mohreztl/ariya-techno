@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>آریا تکنو | Ariya Techno — گجت و لوازم جانبی موبایل</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+* { font-family: "Vazirmatn", Tahoma, sans-serif; }
+body { background:#0B0F17; }
+::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-thumb{background:linear-gradient(#00F0FF,#7B2CBF);border-radius:99px}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(50%)}}
+.animate-marquee{animation:marquee 28s linear infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.floaty{animation:floaty 5s ease-in-out infinite}
+.floaty2{animation:floaty 6s ease-in-out infinite .5s}
+.fadein{animation:fi .35s ease both}
+@keyframes fi{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.glass{background:rgba(22,31,48,.6);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.1)}
+</style>
+</head>
+<body class="text-[#F8FAFC] overflow-x-hidden min-h-screen">
+<div class="pointer-events-none fixed inset-0 z-0">
+  <div class="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full bg-[#00F0FF]/[0.07] blur-[120px]"></div>
+  <div class="absolute top-1/3 -left-40 w-[560px] h-[560px] rounded-full bg-[#7B2CBF]/[0.10] blur-[130px]"></div>
+</div>
+
+<!-- Navbar -->
+<header class="sticky top-3 z-50 px-3 sm:px-6">
+  <nav class="max-w-7xl mx-auto flex items-center gap-3 rounded-2xl glass px-3 sm:px-4 py-2.5 shadow-[0_8px_40px_rgba(0,0,0,.45)]">
+    <div class="flex items-center gap-2.5 shrink-0">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00F0FF] to-[#7B2CBF] p-[1.5px] shadow-[0_0_18px_rgba(0,240,255,.35)]"><div class="w-full h-full rounded-[10px] bg-[#0B0F17] flex items-center justify-center font-black text-[#00F0FF] text-lg">A</div></div>
+      <div class="leading-none"><p class="font-black text-[17px]">آریا <span class="text-[#00F0FF]">تکنو</span></p><p class="text-[10px] text-[#94A3B8] tracking-[0.18em] mt-1">ARIYA TECHNO</p></div>
+    </div>
+    <div class="hidden md:flex flex-1 max-w-xl mx-auto relative">
+      <span class="absolute right-3 top-1/2 -translate-y-1/2 text-[#94A3B8]">⌕</span>
+      <input id="searchInput" placeholder="جستجوی کالا، برند یا دسته‌بندی…" aria-label="جستجو" class="w-full h-11 rounded-full bg-white/[0.04] border border-white/10 pr-10 pl-4 text-sm placeholder:text-[#94A3B8] focus:border-[#00F0FF]/60 outline-none" />
+    </div>
+    <div class="flex items-center gap-2 mr-auto md:mr-0">
+      <div class="relative flex items-center rounded-full bg-white/[0.04] border border-white/10 p-1">
+        <button id="btnRetail" class="h-9 px-3 sm:px-4 rounded-full text-[13px] font-bold bg-gradient-to-l from-[#00F0FF] to-[#00B8D4] text-[#0B0F17]">خرید تکی</button>
+        <button id="btnWholesale" class="h-9 px-3 sm:px-4 rounded-full text-[13px] font-bold text-[#94A3B8]">خرید عمده همکار</button>
+      </div>
+      <button aria-label="سبد خرید" class="relative w-11 h-11 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-lg">🛒<span id="cartBadge" class="hidden absolute -top-1 -left-1 min-w-[20px] h-5 px-1 rounded-full text-[11px] font-black items-center justify-center text-white bg-[#FF2A85] flex">۰</span></button>
+      <button aria-label="حساب کاربری" class="w-11 h-11 rounded-full bg-white/[0.04] border border-white/10 hidden sm:flex items-center justify-center text-lg">👤</button>
+    </div>
+  </nav>
+  <p id="wholesaleBanner" class="hidden max-w-7xl mx-auto mt-2 text-center text-[12px] font-bold text-[#D8B4FE] bg-[#7B2CBF]/15 border border-[#7B2CBF]/30 rounded-full py-1.5 px-4 w-fit">حالت همکار فعال است — قیمت‌ها عمده (کارتن ۱۰ عددی) نمایش داده می‌شود</p>
+</header>
+
+<main class="relative z-10">
+  <!-- Hero -->
+  <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-10 grid lg:grid-cols-2 gap-10 items-center">
+    <div>
+      <span class="inline-flex items-center gap-1.5 rounded-full border border-[#00F0FF]/30 bg-[#00F0FF]/[0.06] text-[#00F0FF] text-[12px] font-bold px-3 py-1.5">✦ نسل جدید گجت و جانبی</span>
+      <h1 class="mt-5 text-[38px] leading-[1.15] sm:text-[54px] sm:leading-[1.12] font-black">تکنولوژی خودت رو<span class="block mt-1 text-[#00F0FF]">ارتقا بده</span></h1>
+      <p class="mt-4 text-[#94A3B8] text-[15px] sm:text-base leading-8 max-w-lg">جدیدترین لوازم جانبی موبایل و گجت‌های هوشمند را با ضمانت اصالت بخر. برای همکاران، قیمت عمده کارتن ۱۰ عددی و ارسال اکسپرس از انبار جنت‌آباد.</p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="#products" class="h-12 px-6 rounded-full font-bold text-[15px] flex items-center gap-2 text-[#0B0F17] bg-gradient-to-l from-[#00F0FF] to-[#4DD0E1] shadow-[0_0_24px_rgba(0,240,255,.35)]">کاوش محصولات ←</a>
+        <button id="heroWholesale" class="h-12 px-6 rounded-full font-bold text-[15px] border border-[#7B2CBF]/50 bg-[#7B2CBF]/10 text-[#E9D5FF]">پنل همکاری عمده</button>
+      </div>
+      <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-[#94A3B8]"><span>🚚 تحویل اکسپرس تهران</span><span>🛡 ضمانت اصالت کالا</span><span>٪ قیمت رقابتی عمده</span></div>
+    </div>
+    <div class="relative h-[380px] sm:h-[440px]" id="heroBox">
+      <div class="absolute inset-0 rounded-[32px] bg-[#161F30]/40 border border-white/[0.06] overflow-hidden"><div class="absolute -top-16 left-1/3 w-64 h-64 rounded-full bg-[#00F0FF]/15 blur-[70px]"></div><div class="absolute bottom-0 right-0 w-72 h-72 rounded-full bg-[#7B2CBF]/20 blur-[80px]"></div></div>
+      <img id="heroImg1" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=700&q=80&auto=format&fit=crop" alt="هدفون" class="floaty absolute top-4 right-4 w-[46%] h-[52%] object-cover rounded-3xl border border-white/15 shadow-2xl" />
+      <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=700&q=80&auto=format&fit=crop" alt="ساعت هوشمند" class="floaty2 absolute top-10 left-4 w-[38%] h-[46%] object-cover rounded-3xl border border-white/15 shadow-2xl" />
+      <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=700&q=80&auto=format&fit=crop" alt="پاوربانک" class="floaty absolute bottom-4 right-8 w-[42%] h-[38%] object-cover rounded-3xl border border-[#00F0FF]/25" />
+      <div class="absolute bottom-6 left-5 rounded-2xl bg-[#0B0F17]/80 border border-white/10 px-3.5 py-2.5 text-[13px]"><b>شارژر GaN ‏۶۰W</b><span class="block text-[11px] text-[#94A3B8] mt-0.5">فست شارژ هم‌زمان دو دستگاه</span></div>
+      <span class="absolute top-[58%] right-[44%] rounded-full bg-[#FF2A85] text-white text-[11px] font-black px-2.5 py-1">30000mAh</span>
+    </div>
+  </section>
+
+  <!-- Bento -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <h2 class="text-[22px] sm:text-[26px] font-black">دسته‌بندی‌های <span class="text-[#00F0FF]">پیشنهادی</span></h2>
+    <p class="text-[#94A3B8] text-[13px] mt-1 mb-5">۸ دسته اصلی فروشگاه</p>
+    <div id="bento" class="grid grid-cols-2 md:grid-cols-4 auto-rows-[150px] sm:auto-rows-[168px] gap-3 sm:gap-4"></div>
+  </section>
+
+  <!-- Finder -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="rounded-[28px] glass p-5 sm:p-7 relative overflow-hidden">
+      <span class="inline-flex text-[12px] font-bold text-[#00F0FF] bg-[#00F0FF]/10 border border-[#00F0FF]/25 rounded-full px-3 py-1">کشف هوشمند جانبی</span>
+      <h2 class="text-[22px] sm:text-[26px] font-black mt-3">برای گوشی تو، دقیقاً چی لازمه؟</h2>
+      <p class="text-[#94A3B8] text-[13px] mt-1">مدل گوشی رو انتخاب کن؛ شارژر، کابل و لوازم سازگار رو فوراً ببین.</p>
+      <div id="phoneTabs" class="flex flex-wrap gap-2 mt-5"></div>
+      <div id="finderGrid" class="mt-6 grid sm:grid-cols-3 gap-3"></div>
+      <p class="mt-4 text-[12px] text-[#94A3B8]">✓ سازگاری تأییدشده — همه اقلام دارای ضمانت اصالت آریا تکنو هستند.</p>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div class="flex flex-wrap items-center justify-between gap-4 mb-5">
+      <div><h2 class="text-[22px] sm:text-[26px] font-black">پیشنهادهای <span class="text-[#FF2A85]">شگفت‌انگیز</span></h2><p id="productsSub" class="text-[#94A3B8] text-[13px] mt-1">منتخب امروز آریا تکنو با بهترین قیمت تکی</p></div>
+      <div class="flex items-center gap-3">
+        <div class="text-left" dir="ltr"><p class="text-[11px] text-[#94A3B8] font-bold">ENDS IN</p><p id="countdown" class="font-black text-lg leading-none mt-1">05:42:18</p></div>
+        <div class="w-[132px]"><div class="flex items-center gap-1" dir="ltr"><div id="battery" class="flex-1 h-4 rounded-full border border-[#00F0FF]/40 bg-white/[0.04] p-[3px] flex gap-[3px]"></div><span class="w-1.5 h-2.5 rounded-r bg-[#00F0FF]/50"></span></div><p id="batteryText" class="text-[11px] text-[#94A3B8] mt-1.5 text-center"></p></div>
+      </div>
+    </div>
+    <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+  </section>
+
+  <!-- Marquee -->
+  <section class="py-8 border-y border-white/[0.06] bg-white/[0.015] overflow-hidden"><div id="marquee" class="flex animate-marquee gap-4 w-max" dir="ltr"></div></section>
+
+  <!-- Footer -->
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+      <div class="rounded-3xl glass p-5"><b>تحویل اکسپرس</b><p class="text-[13px] text-[#94A3B8] leading-6 mt-1">ارسال همان‌روز در تهران و ۲۴ ساعته به شهرستان‌ها</p></div>
+      <div class="rounded-3xl glass p-5"><b>ضمانت اصالت کالا</b><p class="text-[13px] text-[#94A3B8] leading-6 mt-1">همه کالاها با گارانتی معتبر و فاکتور رسمی</p></div>
+      <div class="rounded-3xl glass p-5"><b>قیمت رقابتی عمده</b><p class="text-[13px] text-[#94A3B8] leading-6 mt-1">بهترین قیمت کارتن ۱۰ عددی برای همکاران</p></div>
+      <div class="rounded-3xl glass p-5"><b>پشتیبانی آنلاین</b><p class="text-[13px] text-[#94A3B8] leading-6 mt-1">واتساپ و تلگرام، ۹ صبح تا ۱۰ شب</p></div>
+    </div>
+    <form id="newsForm" class="flex gap-2 max-w-md"><input required type="email" placeholder="ایمیل شما برای خبرنامه" class="flex-1 h-11 rounded-full bg-white/[0.04] border border-white/10 px-4 text-sm" /><button class="h-11 px-5 rounded-full bg-gradient-to-l from-[#00F0FF] to-[#00B8D4] text-[#0B0F17] font-bold text-sm">عضویت</button></form>
+    <p class="text-[12px] text-[#94A3B8] mt-4">نشانی: تهران، جنت‌آباد جنوبی • پشتیبانی واتساپ و تلگرام</p>
+    <p class="text-[12px] text-[#94A3B8] mt-6 pt-6 border-t border-white/[0.06]">© ۱۴۰۳ آریا تکنو — تمامی حقوق محفوظ است.</p>
+  </footer>
+</main>
+<div id="toast" class="hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-[80] rounded-full glass px-5 py-3 text-[13px] font-bold shadow-2xl"></div>
+
+<script>
+const PRODUCTS=[
+{id:1,name:"ساعت هوشمند ULTRA SUR مدل W1",brand:"Ultra Sur",img:"https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=800&q=80&auto=format&fit=crop",rating:4.8,reviews:214,retail:1890000,wholesale:1420000,badge:"NEW",stock:48},
+{id:2,name:"شارژر ۴۰ تا ۶۰ وات داینامیک پاور آیفون (کارتن ۱۰ عددی)",brand:"Dynamic Power",img:"https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800&q=80&auto=format&fit=crop",rating:4.9,reviews:387,retail:1250000,wholesale:890000,badge:"ویژه همکار",stock:320},
+{id:3,name:"پاوربانک ۳۰۰۰۰ اولتراسور مدل +U-P12 دیجیتال",brand:"Ultra Sur",img:"https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800&q=80&auto=format&fit=crop",rating:4.7,reviews:502,retail:2190000,wholesale:1680000,badge:"NEW",stock:76},
+{id:4,name:"هندزفری بلوتوث دورگردنی XO مدل BS30",brand:"XO",img:"https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&q=80&auto=format&fit=crop",rating:4.6,reviews:189,retail:790000,wholesale:540000,badge:"پرفروش",stock:210},
+{id:5,name:"کابل دو سر تایپ سی کنفی مک‌دودو CA-5640",brand:"Mcdodo",img:"https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80&auto=format&fit=crop",rating:4.9,reviews:431,retail:420000,wholesale:285000,badge:"NEW",stock:540}];
+const CATS=[["کابل و شارژر (فست شارژ)","۱۲۰+ کالا","https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800&q=80&auto=format&fit=crop",true],["هدفون و ایرپاد","۸۵+ کالا","https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80&auto=format&fit=crop",false],["پاوربانک ظرفیت بالا","۶۴+ کالا","https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800&q=80&auto=format&fit=crop",false],["ساعت هوشمند و گجت","۵۸+ کالا","https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=800&q=80&auto=format&fit=crop",false],["هولدر و لوازم خودرو","۴۲+ کالا","https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80&auto=format&fit=crop",false],["مبدل و دانگل","۳۷+ کالا","https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&q=80&auto=format&fit=crop",false],["گلس و محافظ","۹۶+ کالا","https://images.unsplash.com/photo-1596558450268-9c27524ba856?w=800&q=80&auto=format&fit=crop",false],["تجهیزات کامپیوتری","۷۰+ کالا","https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&q=80&auto=format&fit=crop",false]];
+const FINDER={"iPhone 16 Pro":[["شارژر MagSafe ۱۵W اپل","MagSafe",1450000,1050000],["کابل تایپ‌سی کنفی Mcdodo ۶۰W","60W",420000,285000],["شارژر GaN ۶۵W داینامیک پاور","GaN",1250000,890000]],"Samsung S24 Ultra":[["شارژر ۴۵W سوپرفست سامسونگ","45W",980000,690000],["کابل تایپ‌سی ۱۰۰W Mcdodo","100W",460000,310000],["پاوربانک ۲۰۰۰۰ LDNIO","20000mAh",1650000,1220000]],"Xiaomi 14":[["شارژر توربو ۶۷W شیائومی","67W Turbo",890000,620000],["کابل تایپ‌سی کنفی ۶ آمپر","6A",380000,250000],["ایرپاد XO BS30","بلوتوث 5.3",790000,540000]],"iPhone 15":[["شارژر ۲۰W آیفون تایپ‌سی","20W",850000,590000],["هولدر مگنتی MagSafe خودرو","MagSafe",620000,430000],["کابل لایتنینگ کنفی Mcdodo","MFi",390000,260000]],"Samsung S23":[["شارژر ۲۵W سامسونگ","25W",720000,490000],["پاوربانک ۱۰۰۰۰ Joyroom","10000mAh",1100000,790000],["گلس سرامیکی S23","سرامیکی",280000,180000]]};
+const BRANDS=["Apple","Samsung","Xiaomi","LDNIO","Mcdodo","Ultra Sur","Earldom","XO","Joyroom","JBL"];
+let wholesale=false, cart={}, phone="iPhone 16 Pro", secs=5*3600+42*60+18;
+const fa=n=>Number(n).toLocaleString("fa-IR");
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg+" • سبد: "+fa(Object.values(cart).reduce((a,b)=>a+b,0));t.classList.remove("hidden");clearTimeout(t._h);t._h=setTimeout(()=>t.classList.add("hidden"),2400);}
+function updateCartBadge(){const c=Object.values(cart).reduce((a,b)=>a+b,0);const b=document.getElementById("cartBadge");b.textContent=fa(c);b.classList.toggle("hidden",c===0);b.classList.toggle("flex",c>0);}
+function stars(r){let s="";for(let i=1;i<=5;i++)s+=`<span style="color:${i<=Math.round(r)?'#FBBF24':'#475569'}">★</span>`;return s;}
+function renderProducts(){
+  const q=document.getElementById("searchInput").value.trim();
+  const list=PRODUCTS.filter(p=>!q||p.name.includes(q)||p.brand.toLowerCase().includes(q.toLowerCase()));
+  document.getElementById("productsSub").textContent=q?`نتایج «${q}» — ${fa(list.length)} کالا`:(wholesale?"قیمت عمده کارتن ۱۰ عددی برای همکاران":"منتخب امروز آریا تکنو با بهترین قیمت تکی");
+  const g=document.getElementById("productGrid");
+  if(!list.length){g.innerHTML=`<div class="sm:col-span-2 lg:col-span-3 rounded-3xl border border-dashed border-white/15 py-14 text-center"><b>کالایی پیدا نشد</b><p class="text-[#94A3B8] text-sm mt-1">عبارت دیگری جستجو کن.</p></div>`;return;}
+  g.innerHTML=list.map(p=>{const price=wholesale?p.wholesale:p.retail;const inCart=cart[p.id]||0;return `<article class="fadein rounded-[26px] glass overflow-hidden hover:border-[#00F0FF]/50 transition">
+    <div class="relative h-[200px] overflow-hidden"><img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover hover:scale-105 transition duration-500" loading="lazy" /><span class="absolute top-3 right-3 rounded-full text-[11px] font-black px-2.5 py-1 text-white ${wholesale?'bg-[#7B2CBF]':'bg-gradient-to-l from-[#7B2CBF] to-[#FF2A85]'}">${wholesale?"ویژه همکار":p.badge}</span><span class="absolute top-3 left-3 rounded-full bg-black/55 border border-white/10 text-[11px] font-bold px-2 py-1">${p.brand}</span>${wholesale?`<span class="absolute bottom-3 right-3 rounded-full bg-[#7B2CBF] text-white text-[11px] font-bold px-2.5 py-1">حداقل سفارش: کارتن ۱۰ عددی</span>`:""}</div>
+    <div class="p-4"><div class="flex items-center justify-between"><span dir="ltr">${stars(p.rating)}</span><span class="text-[11px] text-[#94A3B8]">${fa(p.rating)} (${fa(p.reviews)})</span></div>
+    <h3 class="font-bold text-[15px] leading-7 mt-2 min-h-[56px]">${p.name}</h3><p class="text-[12px] text-[#94A3B8] mt-1">● موجود در انبار (${fa(p.stock)})</p>
+    <div class="mt-3 rounded-2xl bg-white/[0.03] border border-white/[0.06] px-3 py-2.5">${wholesale?`<p class="text-[11px] text-[#C4B5FD] font-bold">قیمت عمده کارتن (۱۰ عددی)</p><p class="mt-1"><b class="text-[19px] text-[#D8B4FE]">${fa(price*10)}</b> <span class="text-[12px] text-[#94A3B8]">تومان</span></p><p class="text-[11px] text-[#94A3B8] mt-0.5">هر عدد ${fa(price)} تومان</p>`:`<p class="text-[11px] text-[#94A3B8] font-bold">قیمت تکی</p><p class="mt-1"><b class="text-[19px]">${fa(price)}</b> <span class="text-[12px] text-[#94A3B8]">تومان</span></p><p class="text-[11px] text-[#94A3B8] mt-0.5">عمده هر عدد ${fa(p.wholesale)} تومان</p>`}</div>
+    <button data-add="${p.id}" class="mt-3 w-full h-11 rounded-full font-bold text-[14px] ${wholesale?'bg-gradient-to-l from-[#7B2CBF] to-[#9D4EDD] text-white':'border border-[#00F0FF]/40 text-[#00F0FF] bg-[#00F0FF]/10'}">${inCart?`✓ ${fa(inCart)} عدد در ${wholesale?"فاکتور":"سبد"} — افزودن بیشتر`:(wholesale?"افزودن عمده به فاکتور":"🛒 افزودن به سبد خرید")}</button></div></article>`;}).join("");
+  g.querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>{const p=PRODUCTS.find(x=>x.id==b.dataset.add);cart[p.id]=(cart[p.id]||0)+(wholesale?10:1);updateCartBadge();renderProducts();toast((wholesale?"۱۰ عدد عمده: ":"")+p.name);});
+}
+function renderFinder(){
+  document.getElementById("phoneTabs").innerHTML=Object.keys(FINDER).map(p=>`<button data-phone="${p}" class="h-10 px-4 rounded-full text-[13px] font-bold border ${p===phone?'bg-gradient-to-l from-[#00F0FF] to-[#00B8D4] text-[#0B0F17] border-transparent':'bg-white/[0.04] border-white/10 text-[#94A3B8]'}">${p}</button>`).join("");
+  document.querySelectorAll("[data-phone]").forEach(b=>b.onclick=()=>{phone=b.dataset.phone;renderFinder();});
+  document.getElementById("finderGrid").innerHTML=FINDER[phone].map((f,i)=>`<div class="fadein rounded-2xl bg-[#0B0F17]/60 border border-white/10 p-3 flex gap-3 items-center"><img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=400&q=80&auto=format&fit=crop" alt="${f[0]}" class="w-16 h-16 rounded-xl object-cover" loading="lazy" /><div class="flex-1 min-w-0"><p class="text-[11px] font-bold text-[#00F0FF]">${f[1]}</p><p class="font-bold text-[14px] truncate">${f[0]}</p><p class="text-[13px] mt-1"><b class="${wholesale?'text-[#D8B4FE]':'text-[#00F0FF]'}">${fa(wholesale?f[3]:f[2])} تومان</b>${wholesale?' <span class="text-[11px] text-[#94A3B8]">/ کارتن ۱۰ عددی</span>':''}</p></div><button data-finder="${i}" class="w-10 h-10 rounded-full ${wholesale?'bg-[#7B2CBF] text-white':'bg-[#00F0FF] text-[#0B0F17]'} font-black text-lg">+</button></div>`).join("");
+  document.querySelectorAll("[data-finder]").forEach(b=>b.onclick=()=>{const f=FINDER[phone][b.dataset.finder];const key=900+Object.keys(FINDER).indexOf(phone)*10+Number(b.dataset.finder);cart[key]=(cart[key]||0)+(wholesale?10:1);updateCartBadge();toast(f[0]);});
+}
+function setWholesale(v){wholesale=v;const r=document.getElementById("btnRetail"),w=document.getElementById("btnWholesale");
+  r.className="h-9 px-3 sm:px-4 rounded-full text-[13px] font-bold "+(!v?"bg-gradient-to-l from-[#00F0FF] to-[#00B8D4] text-[#0B0F17]":"text-[#94A3B8]");
+  w.className="h-9 px-3 sm:px-4 rounded-full text-[13px] font-bold "+(v?"bg-gradient-to-l from-[#7B2CBF] to-[#9D4EDD] text-white":"text-[#94A3B8]");
+  document.getElementById("wholesaleBanner").classList.toggle("hidden",!v);renderProducts();renderFinder();}
+document.getElementById("btnRetail").onclick=()=>setWholesale(false);
+document.getElementById("btnWholesale").onclick=()=>setWholesale(true);
+document.getElementById("heroWholesale").onclick=()=>{setWholesale(true);document.getElementById("products").scrollIntoView({behavior:"smooth"});};
+document.getElementById("searchInput").addEventListener("input",renderProducts);
+document.getElementById("newsForm").onsubmit=e=>{e.preventDefault();toast("عضویت شما در خبرنامه ثبت شد");e.target.reset();};
+document.getElementById("bento").innerHTML=CATS.map(c=>`<button class="relative overflow-hidden rounded-3xl glass text-right group ${c[3]?'row-span-2':''}"><img src="${c[2]}" alt="${c[0]}" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition duration-500" loading="lazy" /><div class="absolute inset-0 bg-gradient-to-t from-[#0B0F17] via-[#0B0F17]/55 to-transparent"></div><div class="relative h-full flex flex-col justify-end p-4"><b class="text-[15px]">${c[0]}</b><span class="text-[12px] text-[#94A3B8] mt-1">${c[1]}</span></div></button>`).join("");
+document.getElementById("marquee").innerHTML=[...BRANDS,...BRANDS].map(b=>`<span class="shrink-0 rounded-full border border-white/10 bg-[#161F30]/60 px-6 py-2.5 font-black text-[15px] text-[#94A3B8]">${b}</span>`).join("");
+document.getElementById("heroBox").addEventListener("mousemove",e=>{const r=e.currentTarget.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;document.getElementById("heroImg1").style.transform=`translate(${x*18}px,${y*-14}px)`;});
+function tick(){secs=secs>0?secs-1:5*3600+42*60+18;const h=String(Math.floor(secs/3600)).padStart(2,"0"),m=String(Math.floor(secs%3600/60)).padStart(2,"0"),s=String(secs%60).padStart(2,"0");document.getElementById("countdown").textContent=`${h}:${m}:${s}`;const pct=Math.round(secs/(6*3600)*100);const lit=Math.ceil(pct/20);document.getElementById("battery").innerHTML=[0,1,2,3,4].map(i=>`<span class="flex-1 rounded-full ${i<lit?'bg-gradient-to-r from-[#00F0FF] to-[#00E5A0]':'bg-white/10'}"></span>`).join("");document.getElementById("batteryText").textContent=fa(pct)+"٪ از زمان پیشنهاد باقی مانده";}
+setInterval(tick,1000);tick();renderProducts();renderFinder();
+</script>
+</body>
+</html>
